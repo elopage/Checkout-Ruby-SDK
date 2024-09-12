@@ -2,14 +2,14 @@
 
 module PayPalCheckoutSdk
   module Vault
-    class VaultSetupToken # rubocop:disable Style/Documentation
+    class VaultPaymentTokenCreateRequest # rubocop:disable Style/Documentation
       attr_accessor :path, :body, :headers, :verb
 
       def initialize
         @headers = {}
         @body = nil
         @verb = 'POST'
-        @path = 'v3/vault/setup-tokens?'
+        @path = 'v3/vault/payment-tokens?'
 
         @headers['Content-Type'] = 'application/json'
       end
