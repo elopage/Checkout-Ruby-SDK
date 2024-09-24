@@ -9,7 +9,7 @@ module PayPalCheckoutSdk
         @headers = {}
         @body = nil
         @verb = 'POST'
-        @path = 'v3/vault/payment-tokens?'
+        @path = '/v3/vault/payment-tokens?'
 
         @headers['Content-Type'] = 'application/json'
       end
