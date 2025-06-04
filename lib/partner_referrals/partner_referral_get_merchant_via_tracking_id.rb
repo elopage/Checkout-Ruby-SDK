@@ -12,6 +12,9 @@ module PayPalCheckoutSdk
       # @param partner_id [String] PayPal partner ID
       # @param tracking_id [String] PayPal tracking ID
       def initialize(partner_id:, tracking_id:)
+        raise ArgumentError, 'partner_id is required' if partner_id.nil?
+        raise ArgumentError, 'tracking_id is required' if tracking_id.nil?
+
         @verb = 'GET'
         @body = nil
         @headers = { 'Content-Type' => 'application/json' }
